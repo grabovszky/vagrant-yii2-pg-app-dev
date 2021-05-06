@@ -1,0 +1,37 @@
+# Your personal GitHub token
+# Generate at: https://github.com/settings/tokens
+github_token: <your-personal-github-token>
+
+# Guest OS timezone
+timezone: Europe/Budapest
+
+# Check updates on every 'vagrant up'?
+box_check_update: false
+
+# Virtual machine name
+machine_name: vagrant-yii2-pg-app-dev.test
+
+# Virtual machine CPU cores number
+cpus: 2
+
+# Virtual machine RAM
+memory: 2048
+
+network: 'private_network'
+
+# Virtual machine IP
+ip: 192.168.83.123
+
+# Root folder name (should be the git project name)
+root_folder: vagrant-yii2-pg-app-dev
+
+# PostgreSQL configs
+db_user: vagrant
+db_user_password: password
+db_name: vagrant
+postgres_version: 11
+
+# Apache domains
+domains:
+  frontend: vagrant-yii2-pg-app-dev.test
+  backend: vagrant-yii2-pg-app-dev-backend.test

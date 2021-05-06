@@ -1,0 +1,21 @@
+# phpstorm project files
+.idea
+
+# vagrant runtime
+/.vagrant
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# yii console commands
+/yii
+/yii_test
+/yii_test.bat
