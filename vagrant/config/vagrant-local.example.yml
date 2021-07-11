@@ -9,13 +9,13 @@ timezone: Europe/Budapest
 box_check_update: false
 
 # Virtual machine name
-machine_name: vagrant-yii2-pg-app-dev.test
+machine_name: ticketing-system-template.test
 
 # Virtual machine CPU cores number
-cpus: 2
+cpus: 1
 
 # Virtual machine RAM
-memory: 2048
+memory: 1024
 
 network: 'private_network'
 
@@ -23,15 +23,15 @@ network: 'private_network'
 ip: 192.168.83.123
 
 # Root folder name (should be the git project name)
-root_folder: vagrant-yii2-pg-app-dev
+root_folder: ticketing-system-template
 
 # PostgreSQL configs
-db_user: vagrant
-db_user_password: password
-db_name: vagrant
+db_user: ticket_system
+db_user_password: asd123
+db_name: ticket_system
 postgres_version: 11
 
 # Apache domains
 domains:
-  frontend: vagrant-yii2-pg-app-dev.test
-  backend: vagrant-yii2-pg-app-dev-backend.test
+  frontend: ticketing-system.test
+  backend: ticketing-system-backend.test

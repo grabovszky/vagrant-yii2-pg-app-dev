@@ -1,11 +1,12 @@
 <?php
+
 return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
-            'username' => 'root',
-            'password' => '',
+            'dsn' => 'pgsql:host=localhost;dbname=ticket_system',
+            'username' => 'ticket_system',
+            'password' => 'asd123',
             'charset' => 'utf8',
         ],
         'mailer' => [

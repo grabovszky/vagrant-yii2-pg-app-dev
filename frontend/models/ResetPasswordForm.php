@@ -1,10 +1,12 @@
 <?php
+
 namespace frontend\models;
 
+use common\models\User;
+use Yii;
+use yii\base\Exception;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
-use Yii;
-use common\models\User;
 
 /**
  * Password reset form
@@ -14,10 +16,9 @@ class ResetPasswordForm extends Model
     public $password;
 
     /**
-     * @var \common\models\User
+     * @var User
      */
     private $_user;
-
 
     /**
      * Creates a form model given a token.
@@ -53,6 +54,7 @@ class ResetPasswordForm extends Model
      * Resets password.
      *
      * @return bool if password was reset.
+     * @throws Exception
      */
     public function resetPassword()
     {

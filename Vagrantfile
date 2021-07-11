@@ -43,7 +43,7 @@ Vagrant.configure(2) do |config|
     config.vm.synced_folder '.', '/vagrant', disabled: true
   else
     # Sync: folder 'ticketing-system-template' (host machine) -> folder '/var/www/html/ticketing-system-template' (guest machine)
-    config.vm.synced_folder '.', '/var/www/html/vagrant-yii2-pg-app-dev', owner: 'vagrant', group: 'vagrant'
+    config.vm.synced_folder '.', '/var/www/html/ticketing-system-template', owner: 'vagrant', group: 'vagrant'
 
     # Disable folder '/vagrant' (guest machine)
     config.vm.synced_folder '.', '/vagrant', disabled: true

@@ -1,11 +1,14 @@
+/* ********** Normalize ********** */
 html,
 body {
     height: 100%;
 }
 
+/* ********** Yii2 CSS configs ********** */
+
 .wrap {
-    min-height: 100%;
     height: auto;
+    min-height: 100%;
     margin: 0 auto -60px;
     padding: 0 0 60px;
 }
@@ -16,14 +19,13 @@ body {
 
 .footer {
     height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
     padding-top: 20px;
+    border-top: 1px solid #DDDDDD;
+    background-color: #F5F5F5;
 }
 
 .jumbotron {
     text-align: center;
-    background-color: transparent;
 }
 
 .jumbotron .btn {
@@ -32,19 +34,19 @@ body {
 }
 
 .not-set {
-    color: #c55;
     font-style: italic;
+    color: #CC5555;
 }
 
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
+    font-family: 'Glyphicons Halflings', serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
     padding-left: 5px;
 }
 
@@ -84,29 +86,28 @@ a.desc:after {
 .hint-block {
     display: block;
     margin-top: 5px;
-    color: #999;
+    color: #999999;
 }
 
 .error-summary {
-    color: #a94442;
-    background: #fdf7f7;
-    border-left: 3px solid #eed3d7;
-    padding: 10px 20px;
     margin: 0 0 15px 0;
+    padding: 10px 20px;
+    color: #A94442;
+    border-left: 3px solid #EED3D7;
+    background: #FDF7F7;
 }
 
 /* align the logout "link" (button in form) of the navbar */
 .nav li > form > button.logout {
-    padding: 15px;
     border: none;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .nav li > form > button.logout {
-        display:block;
-        text-align: left;
+        display: block;
         width: 100%;
         padding: 10px 15px;
+        text-align: left;
     }
 }
 
@@ -117,4 +118,46 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+/* ********** Custom CSS ********** */
+
+/* ***** Comments section ***** */
+
+.create-comment .action-buttons {
+    display: none;
+}
+
+.create-comment.focused .action-buttons {
+    display: block;
+}
+
+.comment-item {
+    position: relative;
+}
+
+.comment-avatar {
+    width: 50px;
+}
+
+.comment-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.comment-actions .dropdown-toggle:before {
+    display: none;
+}
+
+.comment-item .comment-edit-section {
+    display: none;
+}
+
+.comment-item.edit .comment-text {
+    display: none;
+}
+
+.comment-item.edit .comment-edit-section {
+    display: block;
 }

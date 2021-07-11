@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use common\models\User;
+use yii\base\Exception;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
 
@@ -17,7 +18,6 @@ class VerifyEmailForm extends Model
      * @var User
      */
     private $_user;
-
 
     /**
      * Creates a form model with given token.
@@ -42,6 +42,7 @@ class VerifyEmailForm extends Model
      * Verify email
      *
      * @return User|null the saved model or null if saving fails
+     * @throws Exception
      */
     public function verifyEmail()
     {

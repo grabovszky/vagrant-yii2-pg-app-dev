@@ -1,13 +1,16 @@
 <?php
 
-/* @var $this \yii\web\View */
+/* @var $this View */
+
 /* @var $content string */
 
 use backend\assets\AppAsset;
 use yii\helpers\Html;
+use yii\web\View;
 
 AppAsset::register($this);
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -15,15 +18,24 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <?php $this->registerCsrfMetaTags() ?>
+
     <title><?= Html::encode($this->title) ?></title>
+
     <?php $this->head() ?>
+
+    <!-- Font-awesome-5 cdnjs link to use font-awesome icons in whole page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"/>
 </head>
 <body class="blank">
 <?php $this->beginBody() ?>
 
 <div class="container">
 
+    <!-- Page content -->
     <div class="wrap">
         <?= $content ?>
     </div>
@@ -32,5 +44,6 @@ AppAsset::register($this);
 
 <?php $this->endBody() ?>
 </body>
+
 </html>
 <?php $this->endPage() ?>
